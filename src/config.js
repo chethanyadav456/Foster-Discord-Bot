@@ -1,14 +1,16 @@
+import { Colors } from "discord.js";
+
 export const config = {
-    prefix: "!",
-    token: "NzEwNzQ0NjA3MjM2NzUyNzg0.Xq3d1A.1O7Z8v3d0e6FQ2J6n4NzC6bJ9qY",
-    owner: "Your ID",
-    admins: [],
-    support: [],
-    defaultCooldown: 3,
+    prefix: process.env.BOT_PREFIX || "!",
+    token: process.env.BOT_TOKEN || "Your Token",
+    owner: process.env.BOT_OWNER || "Your ID",
+    admins: process.env.ADMINS.split(', ') || ["ADMIN_ID"],
+    support: process.env.SUPPORTERS.split(', ') || ["SUPPORTER_ID"],
+    defaultCooldown: process.env.DEFAULT_COOLDOWN || 3,
     colors: {
-        success: "#00FF00",
-        error: "#FF0000",
-        warning: "#FFA500"
+        success: Colors.Green,
+        error: Colors.Red,
+        warning: Colors.Orange
     },
     emojis: {
         success: "<:success:732298639736721469>",

@@ -1,4 +1,4 @@
-import { Client, Collection, GatewayIntentBits, Partials } from 'discord.js';
+import { Client, Collection, GatewayIntentBits, Partials, ThreadAutoArchiveDuration } from 'discord.js';
 
 class Foster extends Client {
     constructor() {
@@ -28,6 +28,7 @@ class Foster extends Client {
         this.aliases = new Collection();
         this.cooldowns = new Collection();
         this.config = require('../config.js');
+        this.logger = require('@utils/Logger.js');
     }
 }
 

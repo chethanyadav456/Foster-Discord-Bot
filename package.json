@@ -5,12 +5,33 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "chethanyadav456",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^14.17.3",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "module-alias": "^2.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "engines": {
+    "node": ">=16.6.0"
+  },
+  "_moduleAliases": {
+    "@": "./src",
+    "@commands": "src/Commands",
+    "@events": "src/Events",
+    "@utils": "src/Utils",
+    "@schemas": "src/Schemas"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chethanyadav456/Foster-Discord-Bot.git",
+    "directory": "src"
   }
 }
